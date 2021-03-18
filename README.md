@@ -5,17 +5,25 @@ Displays the Google Pay image.
 ## Installation
 
 ```sh
-npm install react-native-google-pay-image
+yarn add react-native-google-pay-image
 ```
 
 ## Usage
 
 ```js
-import GooglePayImage from "react-native-google-pay-image";
+import { GooglePayImageView } from 'react-native-google-pay-image'
 
 // ...
 
-const result = await GooglePayImage.multiply(3, 7);
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <TouchableWithoutFeedback onPress={() => console.log('ONPRESS')}>
+        <GooglePayImageView type="plain" style={styles.box} />
+      </TouchableWithoutFeedback>
+    </View>
+  )
+}
 ```
 
 ## Contributing
